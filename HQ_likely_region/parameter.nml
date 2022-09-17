@@ -1,0 +1,29 @@
+! parameter.nml: namelist for calling QNSTOP to optimize
+! the HILL_OBJ function.
+&PROBLEM
+NumInitValues=4
+Q_LB(1:4)=-3.0D0, -3.0D0, -3.0D0, -3.0D0 
+Q_UB(1:4)= 3.0D0, 3.0D0  6.0D0, 1.0D0       
+hillParameters(1:4)= 1.0D0, -3.0D0, 4.0D0, 1.0D0
+       
+Q_MODE='G'
+/
+&OPTPARM
+Q_ITERlim=100
+Q_EVALlim=0
+Q_SWITCH=3
+Q_NSTART=20
+Q_N=20
+Q_MIN_TAU=0.00D0
+Q_TAU=1.3
+Q_GAIN=35
+Q_GAMMAV=20.0D0
+Q_GAMMAW=20.0D0
+Q_ETA=1D0
+Q_OMP=0
+Q_TRACE=55
+/
+
+
+
+
